@@ -20,7 +20,7 @@ router.post(
       name: req.body.name,
       email: req.body.email,
       password: req.body.password,
-    }).then((user) => res.json(user));
+    }).then((user) => res.json(user)).catch((err)=>{res.json({email:"eneter unique for email"})})
   }
 );
 
